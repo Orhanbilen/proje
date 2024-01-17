@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"
+rel="stylesheet"
+/>
+</head>
+<body>
+<!-- Navbar -->
+{% include 'partials/_navbar.html' %}
+  <!-- Navbar --> 
+  <main>
+    <br>
+    <br>
+    <!-- İNPUTLAR--> 
+    <div class="container my-4">
+        <form method="POST">
+          {% csrf_token %}
+
+          
+          
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row mb-4">
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input name="fullname" type="text" id="form6Example1" class="form-control" />
+                  <label class="form-label" for="form6Example1">Ad</label>
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input name="lastname" type="text" id="form6Example2" class="form-control" />
+                  <label class="form-label" for="form6Example2">Soy Ad</label>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Text input -->
+           
+          
+            <!-- Text input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input name="adress" type="text" id="form6Example4" class="form-control" />
+              <label class="form-label" for="form6Example4">Adres</label>
+            </div>
+          
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input name="email" type="email" id="form6Example5" class="form-control" />
+              <label class="form-label" for="form6Example5">Email</label>
+            </div>
+          
+            <!-- Number input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input name="phone" type="number" id="form6Example6" class="form-control" />
+              <label class="form-label" for="form6Example6">Telefon</label>
+            </div>
+          
+            <!-- Message input -->
+            
+          
+            <!-- Checkbox -->
+            <div class="form-check d-flex justify-content-center mb-4">
+              <input
+                class="form-check-input me-2"
+                type="checkbox"
+                value=""
+                id="form6Example8"
+                checked
+              />
+              <label class="form-check-label" for="form6Example8"> Koşulları Kabul ediyorum </label>
+            </div>
+          
+            <!-- Submit button -->
+            <button data-mdb-ripple-init style="background-color: brown;" type="submit" class="btn btn-primary btn-block mb-4">Gönder</button>
+          </form>
+        </form>
+                
+            </div>
+        
+    </div>
+  </main>
+  
+  
+
+  
+
+    
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"
+
+></script>    
+<script>
+    // Initialization for ES Users
+import { Carousel, initMDB } from "mdb-ui-kit";
+
+initMDB({ Carousel });
+</script>
+</body>
+</html>

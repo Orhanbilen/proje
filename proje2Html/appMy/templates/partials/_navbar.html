@@ -1,0 +1,92 @@
+<nav style="background-color: rgb(131, 216, 34);" class="navbar navbar-expand-lg  ">
+    <!-- Container wrapper -->
+    <div class="container-fluid" >
+      <!-- Toggle button -->
+      <button
+        data-mdb-collapse-init
+        class="navbar-toggler"
+        type="button"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        
+          
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">ANASAYFA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/hakkimizda">HAKKIMIZDA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Kategori">KATEGORİ</a>
+          <li class="nav-item">
+            <a class="nav-link" href="/Iletisim">İLETİŞİM</a>
+            
+          </li>
+        </ul>
+        
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+  
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+          
+        {% if request.user.is_authenticated %} 
+           <div class="text-primary me-3"> {{request.user.first_name}} {{request.user.last_name}} </div> 
+
+        {% else %}
+        <a href="/giris" class="btn btn-link px-3 me-2">
+          Giriş
+        </a>
+        <a href="/kaydol" class="btn btn-primary me-3">
+          Kaydol
+        </a>
+        {% endif %}
+        <div class="dropdown">
+          <button
+            class="btn btn-primary dropdown-toggle"
+            type="button"
+            id="dropdownExampleAnimation"
+            data-mdb-dropdown-init
+            data-mdb-ripple-init
+            aria-expanded="false"
+            data-mdb-dropdown-animation="off"
+            style="background-color: red;"
+          >
+            {{ request.user.username }}
+          </button>
+            <ul  class="dropdown-menu" aria-labelledby="dropdownExampleAnimation">
+            <li><a class="dropdown-item" href="#">{{request.user.get_full_name}} </a></li>
+            <li><a class="dropdown-item" href="#">{{request.user.email}} </a></li>
+            <li><a class="dropdown-item" href="{% url 'logoutUser' %}">Çıkış yap</a></li>
+          </ul>
+        </div>
+        <!-- Avatar -->
+        
+      </div>
+      <!-- Right elements -->
+    </div>
+        
+  
+        <!-- Notifications -->
+        
+          </ul>
+        </div>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>

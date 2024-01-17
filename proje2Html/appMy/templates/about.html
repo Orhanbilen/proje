@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"
+rel="stylesheet"
+/>
+</head>
+<body>
+<!-- Navbar -->
+{% include 'partials/_navbar.html' %}
+  <!-- Navbar --> 
+  <main>
+    <br>
+    <div class="container">
+        <div class="card p-3 my-4">
+        <h2>Hakkımızda</h2>
+        <p style="max-width: 800px">Teknoloji son derece önemli bir bilimdir. Teknoloji olmasaydı günümüzde sahip olduğumuz gibi rahat bir yaşama sahip olamazdık.
+
+          Gelişen teknoloji sayesinde hastalıkları daha kolay tedavi edebiliyor, merak ettiğimiz bilgileri daha hızlı ve kolay bir şekilde elde edebiliyoruz. Yine teknoloji sayesinde yüzlerce adamın yapamayacağı zor bir işi bir makine veya cihaz sayesinde anında yapabiliyoruz. Uzak diyarları kısa sürede gezebiliyor ve eğlence ihtiyacımızı bazı teknolojik aletler sayesinde giderebiliyoruz. Teknoloji sayesinde dünyayı bırakın, uzay hakkında bile bilgi sahibi olabiliyor ve uzayla ilgili tüm gizemleri çözebiliyoruz.
+     
+          Teknolojiyi doğru şekilde kullanırsak bizim için çok büyük faydaları vardır. Ancak onu faydalı işler için değil de zararlı işler için kullanırsak tehlikeli ve zararlı olabilir.Özetlemek gerekirse teknolojinin biz insanlar için çok büyük bir nimet olduğunu söyleyebiliriz. Bugün böyle rahat bir yaşam sürebiliyorsak, uzaktaki yakınlarımıza istediğimiz an ulaşabiliyorsak, yayan gidilmesi 6 ay süren bir şehre uçakla 2 saatte gidebiliyorsak bu teknolojinin sayesindedir.</p>
+
+        </div>
+        
+    </div>
+  </main>
+  
+  
+
+  
+
+    
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"
+
+></script>    
+<script>
+    // Initialization for ES Users
+import { Carousel, initMDB } from "mdb-ui-kit";
+
+initMDB({ Carousel });
+</script>
+</body>
+</html>

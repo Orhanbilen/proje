@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"
+rel="stylesheet"
+/>
+</head>
+<body>
+<!-- Navbar -->
+{% include 'partials/_navbar.html' %}
+  <!-- Navbar --> 
+  
+  <main>
+   
+  <!-- İŞLER -->
+  <div class="container">
+    <div class="row my-4">
+        <h1>TEKNOLOJİ HABERLERİ</h2>
+        <hr>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for blog in blog_list %}
+              <div class="col">
+                  <div class="card h-100">
+                      <img src="{% static 'img/33.webp' %}" class="card-img" alt="Hollywood Sign on The Hill"/>
+                      <div class="card-body">
+                          <h5 class="card-title">{{ blog.title }}</h5>
+                          <p class="card-text">
+                              {{ blog.text }}
+                          </p>
+                          <p class="card-text">
+                            {{ blog.date_now }}
+                        </p>
+                      </div>
+                  </div>
+              </div>
+          {% endfor %}
+      </div>
+          
+
+  </div>
+ 
+  </main>
+
+  <footer class="bg-body-tertiary text-center">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Images -->
+      <section class="">
+        <div class="row">
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div data-mdb-ripple-init
+              class="bg-image hover-overlay shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div data-mdb-ripple-init
+              class="bg-image hover-overlay shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div data-mdb-ripple-init
+              class="bg-image hover-overlay shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div data-mdb-ripple-init
+              class="bg-image hover-overlay shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div data-mdb-ripple-init
+              class="bg-image hover-overlay shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div data-mdb-ripple-init
+              class="bg-image hover-overlay shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Images -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2020 Copyright:
+      <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+    
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"
+
+></script>    
+<script>
+    // Initialization for ES Users
+import { Carousel, initMDB } from "mdb-ui-kit";
+
+initMDB({ Carousel });
+</script>
+</body>
+</html>
